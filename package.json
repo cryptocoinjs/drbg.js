@@ -12,6 +12,7 @@
   "author": "Kirill Fomichev <fanatid@yandex.ru> (https://github.com/fanatid)",
   "files": [
     "lib",
+    "hash.js",
     "hmac.js",
     "index.js",
     "package.json",
@@ -31,6 +32,7 @@
     "unit:browser": "karma start karma.conf.js"
   },
   "dependencies": {
+    "create-hash": "^1.1.2",
     "create-hmac": "^1.1.4"
   },
   "devDependencies": {

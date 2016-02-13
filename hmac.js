@@ -4,8 +4,8 @@ var createHmac = require('create-hmac')
 var hashInfo = require('./lib/hash-info.json')
 
 var ebuf = new Buffer(0)
-var zbuf = new Buffer([ 0x00 ])
-var obuf = new Buffer([ 0x01 ])
+var b0x00 = new Buffer([ 0x00 ])
+var b0x01 = new Buffer([ 0x01 ])
 
 function HmacDRBG (algo, entropy, nonce, pers) {
   var info = hashInfo[algo]
@@ -20,14 +20,14 @@ function HmacDRBG (algo, entropy, nonce, pers) {
 }
 
 HmacDRBG.prototype._update = function (seed) {
-  var kmac = createHmac(this._algo, this._K).update(this._V).update(zbuf)
+  var kmac = createHmac(this._algo, this._K).update(this._V).update(b0x00)
   if (seed) kmac.update(seed)
 
   this._K = kmac.digest()
   this._V = createHmac(this._algo, this._K).update(this._V).digest()
   if (!seed) return
 
-  this._K = createHmac(this._algo, this._K).update(this._V).update(obuf).update(seed).digest()
+  this._K = createHmac(this._algo, this._K).update(this._V).update(b0x01).update(seed).digest()
   this._V = createHmac(this._algo, this._K).update(this._V).digest()
 }
 
@@ -47,12 +47,14 @@ HmacDRBG.prototype._init = function (entropy, nonce, pers) {
 
 HmacDRBG.prototype.reseed = function (entropy, add) {
   if (entropy.length < this._securityStrength) throw new Error('Not enough entropy')
+
   this._update(Buffer.concat([ entropy, add || ebuf ]))
   this._reseed = 1
 }
 
 HmacDRBG.prototype.generate = function (len, add) {
   if (this._reseed > this._reseedInterval) throw new Error('Reseed is required')
+
   if (add && add.length === 0) add = undefined
   if (add) this._update(add)
 
