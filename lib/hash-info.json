@@ -1,0 +1,22 @@
+{
+  "sha1": {
+    "outlen": 160,
+    "securityStrength": 128
+  },
+  "sha224": {
+    "outlen": 224,
+    "securityStrength": 192
+  },
+  "sha256": {
+    "outlen": 256,
+    "securityStrength": 256
+  },
+  "sha384": {
+    "outlen": 384,
+    "securityStrength": 256
+  },
+  "sha512": {
+    "outlen": 512,
+    "securityStrength": 256
+  }
+}

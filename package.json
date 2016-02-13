@@ -11,6 +11,8 @@
   "license": "MIT",
   "author": "Kirill Fomichev <fanatid@yandex.ru> (https://github.com/fanatid)",
   "files": [
+    "lib",
+    "hmac.js",
     "index.js",
     "package.json",
     "LICENSE",
@@ -28,7 +30,9 @@
     "unit:node": "tap --cov test/**/*.js",
     "unit:browser": "karma start karma.conf.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "create-hmac": "^1.1.4"
+  },
   "devDependencies": {
     "browserify": "^13.0.0",
     "karma": "^0.13.19",
