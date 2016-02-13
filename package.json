@@ -1,0 +1,46 @@
+{
+  "name": "drbg.js",
+  "version": "1.0.0",
+  "description": "Deterministic Random Bit Generators from NIST SP 800-90A",
+  "keywords": [
+    "drbg"
+  ],
+  "bugs": {
+    "url": "https://github.com/fanatid/drbg.js/issues"
+  },
+  "license": "MIT",
+  "author": "Kirill Fomichev <fanatid@yandex.ru> (https://github.com/fanatid)",
+  "files": [
+    "index.js",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fanatid/drbg.js.git"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run lint && npm run unit",
+    "unit": "npm run unit:node && npm run unit:browser",
+    "unit:node": "tap --cov test/**/*.js",
+    "unit:browser": "karma start karma.conf.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "karma": "^0.13.19",
+    "karma-browserify": "^5.0.1",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-detect-browsers": "^2.0.2",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-tap": "^1.0.3",
+    "tap": "^5.4.4",
+    "standard": "^6.0.4"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}
