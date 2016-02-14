@@ -11,7 +11,7 @@ Deterministic Random Bits Generators
 Based on NIST Recommended DRBG from [NIST SP800-90A](https://en.wikipedia.org/wiki/NIST_SP_800-90A) with the following properties:
   * <s>CTR DRBG with DF with AES-128, AES-192, AES-256 cores</s> see [issue #1](https://github.com/fanatid/drbg.js/issues/1)
   * Hash DRBG with DF with SHA-1, SHA-224, SHA-256, SHA-384, SHA-512 cores
-  * HMAC DRBG with DF with SHA-1, SHA-224, SHA-256, SHA-384, SHA-512 cores
+  * HMAC DRBG with SHA-1, SHA-224, SHA-256, SHA-384, SHA-512 cores
   * <s>with</s> and without prediction resistance
 
 ## Installation
