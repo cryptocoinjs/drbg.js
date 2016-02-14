@@ -12,8 +12,8 @@ function HmacDRBG (algo, entropy, nonce, pers) {
   if (info === undefined) throw new Error('hash ' + algo + ' is not supported')
 
   this._algo = algo
-  this._outlen = info.outlen / 8
   this._securityStrength = info.securityStrength / 8
+  this._outlen = info.outlen / 8
   this._reseedInterval = 0x1000000000000 // 2**48
 
   this._init(entropy, nonce, pers)
@@ -59,9 +59,9 @@ HmacDRBG.prototype.generate = function (len, add) {
   if (add) this._update(add)
 
   var temp = new Buffer(0)
-  for (var i = 0, m = Math.ceil(len / this._outlen); i < m; ++i) {
+  while (temp.length < len) {
     this._V = createHmac(this._algo, this._K).update(this._V).digest()
-    temp = Buffer.concat([temp, this._V])
+    temp = Buffer.concat([ temp, this._V ])
   }
 
   this._update(add)

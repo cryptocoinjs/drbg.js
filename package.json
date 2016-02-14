@@ -1,9 +1,13 @@
 {
   "name": "drbg.js",
   "version": "1.0.0",
-  "description": "Deterministic Random Bit Generators from NIST SP 800-90A",
+  "description": "Deterministic Random Bit Generators",
   "keywords": [
-    "drbg"
+    "drbg",
+    "nist sp 800-90a",
+    "ctrdrbg",
+    "hashdrbg",
+    "hmacdrbg"
   ],
   "bugs": {
     "url": "https://github.com/fanatid/drbg.js/issues"
@@ -32,11 +36,12 @@
     "unit:browser": "karma start karma.conf.js"
   },
   "dependencies": {
+    "browserify-aes": "^1.0.6",
     "create-hash": "^1.1.2",
     "create-hmac": "^1.1.4"
   },
   "devDependencies": {
-    "browserify": "^13.0.0",
+    "browserify": "^12.0.0",
     "karma": "^0.13.19",
     "karma-browserify": "^5.0.1",
     "karma-chrome-launcher": "^0.2.2",
