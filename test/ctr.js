@@ -1,5 +1,4 @@
 'use strict'
-
 var tap = require('tap')
 var CtrDRBG = require('../ctr')
 

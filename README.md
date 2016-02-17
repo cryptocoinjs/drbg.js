@@ -1,15 +1,15 @@
 # drbg.js
 
 [![NPM Package](https://img.shields.io/npm/v/drbg.js.svg?style=flat-square)](https://www.npmjs.org/package/drbg.js)
-[![Build Status](https://img.shields.io/travis/fanatid/drbg.js.svg?branch=master&style=flat-square)](https://travis-ci.org/fanatid/drbg.js)
-[![Dependency status](https://img.shields.io/david/fanatid/drbg.js.svg?style=flat-square)](https://david-dm.org/fanatid/drbg.js#info=dependencies)
+[![Build Status](https://img.shields.io/travis/cryptocoinjs/drbg.js.svg?branch=master&style=flat-square)](https://travis-ci.org/cryptocoinjs/drbg.js)
+[![Dependency status](https://img.shields.io/david/cryptocoinjs/drbg.js.svg?style=flat-square)](https://david-dm.org/cryptocoinjs/drbg.js#info=dependencies)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 Deterministic Random Bits Generators
 
 Based on NIST Recommended DRBG from [NIST SP800-90A](https://en.wikipedia.org/wiki/NIST_SP_800-90A) with the following properties:
-  * <s>CTR DRBG with DF with AES-128, AES-192, AES-256 cores</s> see [issue #1](https://github.com/fanatid/drbg.js/issues/1)
+  * <s>CTR DRBG with DF with AES-128, AES-192, AES-256 cores</s> see [issue #1](https://github.com/cryptocoinjs/drbg.js/issues/1)
   * Hash DRBG with DF with SHA-1, SHA-224, SHA-256, SHA-384, SHA-512 cores
   * HMAC DRBG with SHA-1, SHA-224, SHA-256, SHA-384, SHA-512 cores
   * <s>with</s> and without prediction resistance

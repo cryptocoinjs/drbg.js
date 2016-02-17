@@ -1,6 +1,6 @@
 {
   "name": "drbg.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Deterministic Random Bit Generators",
   "keywords": [
     "drbg",
@@ -10,7 +10,7 @@
     "hmacdrbg"
   ],
   "bugs": {
-    "url": "https://github.com/fanatid/drbg.js/issues"
+    "url": "https://github.com/cryptocoinjs/drbg.js/issues"
   },
   "license": "MIT",
   "author": "Kirill Fomichev <fanatid@yandex.ru> (https://github.com/fanatid)",
@@ -18,15 +18,12 @@
     "lib",
     "hash.js",
     "hmac.js",
-    "index.js",
-    "package.json",
-    "LICENSE",
-    "README.md"
+    "index.js"
   ],
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fanatid/drbg.js.git"
+    "url": "https://github.com/cryptocoinjs/drbg.js.git"
   },
   "scripts": {
     "lint": "standard",

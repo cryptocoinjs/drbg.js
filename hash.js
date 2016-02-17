@@ -1,5 +1,4 @@
 'use strict'
-
 var createHash = require('create-hash')
 var hashInfo = require('./lib/hash-info.json')
 var util = require('./lib/util')

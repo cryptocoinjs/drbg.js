@@ -1,5 +1,4 @@
 'use strict'
-
 var createHmac = require('create-hmac')
 var hashInfo = require('./lib/hash-info.json')
 

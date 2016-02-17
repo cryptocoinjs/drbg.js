@@ -1,5 +1,4 @@
 'use strict'
-
 var tap = require('tap')
 var HmacDRBG = require('../hmac')
 

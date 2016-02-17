@@ -1,5 +1,4 @@
 'use strict'
-
 var createCipher = require('browserify-aes').createCipher
 var cipherInfo = require('./lib/cipher-info.json')
 var util = require('./lib/util')
